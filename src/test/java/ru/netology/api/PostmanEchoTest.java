@@ -10,14 +10,14 @@ public class PostmanEchoTest {
     void shouldSendGetRequest() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("My name is Natalya") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("The end") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo ("Hello"))
+                .body("data", equalTo ("The end"))
         ;
 
     }
